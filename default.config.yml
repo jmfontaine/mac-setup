@@ -1,0 +1,55 @@
+---
+homebrew_installed_packages:
+  - awscli
+  - aws-okta
+  - diff-so-fancy
+  - git
+  - git-extras
+  - git-secrets
+  - go
+  - hadolint
+  - jq
+  - mas
+  - tfenv
+  - youtube-dl
+  - zplug
+  - zsh
+  - zsh-completions
+
+homebrew_installed_casks:
+  - 1password
+  - airfoil
+  - alfred
+  - arq
+  - bartender
+  - carbon-copy-cloner
+  - cleanmymac
+  - docker
+  - evernote
+  - fantastical
+  - firefox
+  - iterm2
+  - microsoft-office
+  - microsoft-teams
+  - skitch
+  - slack
+  - visual-studio-code
+
+mas_installed_apps:
+  - { id: 918858936, name: "Airmail" }
+  - { id: 937984704, name: "Amphetamine" }
+  - { id: 1435957248, name: "Drafts" }
+  - { id: 441258766, name: "Magnet" }
+  - { id: 1289197285, name: "Mindnode" }
+  - { id: 1449412482, name: "Reeder" }
+  - { id: 488764545, name: "The Clock" }
+  - { id: 904280696, name: "Things" }
+  - { id: 1384080005, name: "Tweetbot" }
+
+dotfiles_repo: git@github.com:jmfontaine/dotfiles.git
+dotfiles_repo_version: master
+dotfiles_repo_local_destination: ~/Workspaces/Personal/dotfiles
+dotfiles_files:
+  - .gitconfig
+  - .gitignore
+  - .zshrc

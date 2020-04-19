@@ -1,0 +1,10 @@
+---
+- name: Remove group write permission on some ZSH folders
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: g-w
+  with_items:
+    - /usr/local/share
+    - /usr/local/share/zsh
+    - /usr/local/share/zsh/site-functions

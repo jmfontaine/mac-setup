@@ -1,0 +1,25 @@
+---
+- name: Automatically hide and show the Dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+    state: present
+
+- name: Restart the Dock to pick up new settings
+  command: killall Dock
+
+- name: Enable Mouse Right-click
+  osx_defaults:
+    domain: com.apple.driver.AppleBluetoothMultitouch.mouse
+    key: MouseButtonMode
+    type: string
+    value: TwoButton
+    state: present
+
+- name: Restart the Finder to Pick Up New Settings
+  command: killall Finder
+
+- name: Restart SystemUIServer to Pick Up New Settings
+  command: killall SystemUIServer
