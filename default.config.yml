@@ -1,16 +1,26 @@
 ---
 homebrew_installed_packages:
+  - ansible
   - awscli
   - aws-okta
+  - coreutils
   - diff-so-fancy
+  - direnv
   - git
   - git-extras
   - git-secrets
   - go
+  - gzip
   - hadolint
   - jq
   - mas
+  - mosh
+  - nvm
+  - postgresql
+  - python@3.8
   - tfenv
+  - whalebrew
+  - xsv
   - youtube-dl
   - zplug
   - zsh
@@ -18,6 +28,7 @@ homebrew_installed_packages:
 
 homebrew_installed_casks:
   - 1password
+  - adobe-digital-editions
   - airfoil
   - alfred
   - arq
@@ -27,16 +38,17 @@ homebrew_installed_casks:
   - docker
   - evernote
   - fantastical
-  - firefox
+  - google-chrome
   - iterm2
   - microsoft-office
   - microsoft-teams
   - skitch
   - slack
+  - typora
   - visual-studio-code
+  - vlc
 
 mas_installed_apps:
-  - { id: 918858936, name: "Airmail" }
   - { id: 937984704, name: "Amphetamine" }
   - { id: 1435957248, name: "Drafts" }
   - { id: 441258766, name: "Magnet" }
@@ -51,5 +63,6 @@ dotfiles_repo_version: master
 dotfiles_repo_local_destination: ~/Workspaces/Personal/dotfiles
 dotfiles_files:
   - .gitconfig
+  - .gitconfig-work
   - .gitignore
   - .zshrc
