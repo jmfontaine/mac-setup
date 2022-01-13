@@ -1,23 +1,29 @@
 ---
-- hosts: localhost
-  connection: local
+- hosts: all
 
+  # Load default configuration
   vars_files:
     - default.config.yml
 
+  # Allow to override the default configuration
   pre_tasks:
     - include_vars: "{{ item }}"
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
 
   roles:
-    - role: macos
-      tags: ['macos']
-    - role: homebrew
-      tags: ['homebrew']
-    - role: geerlingguy.mas
-      tags: ['mas']
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew
+      tags: ["homebrew"]
+    - role: geerlingguy.mac.mas
+      when: mas_installed_apps
+      tags: ["mas"]
+    - role: geerlingguy.mac.dock
+      when: dockitems_remove or dockitems_persist
+      tags: ["dock"]
     - role: zsh
-      tags: ['zsh']
+      tags: ["zsh"]
     - role: geerlingguy.dotfiles
-      tags: ['dotfiles']
+      tags: ["dotfiles"]
+    - role: vscode
+      tags: ["vscode"]

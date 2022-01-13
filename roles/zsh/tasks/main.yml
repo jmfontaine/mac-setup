@@ -1,4 +1,5 @@
 ---
+# KLUDGE: see https://www.zsh.org/mla/users/2008/msg00566.html
 - name: Remove group write permission on some ZSH folders
   file:
     path: "{{ item }}"

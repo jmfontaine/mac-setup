@@ -1,68 +1,171 @@
 ---
+homebrew_taps:
+  - anchore/grype
+  - homebrew/core
+  - turbot/tap
+
 homebrew_installed_packages:
-  - ansible
+  - aws-cdk
   - awscli
-  - aws-okta
+  - code-server
   - coreutils
+  - ctop
+  - curl
   - diff-so-fancy
   - direnv
+  - dive
   - git
   - git-extras
   - git-secrets
+  - gnu-sed
   - go
+  - grep
+  - grype
   - gzip
   - hadolint
+  - htop
   - jq
   - mas
   - mosh
   - nvm
+  - packer
+  - poetry
   - postgresql
-  - python@3.8
+  - pre-commit
+  - pyenv
+  - steampipe
+  - terragrunt
   - tfenv
-  - whalebrew
-  - xsv
   - youtube-dl
   - zplug
-  - zsh
   - zsh-completions
 
-homebrew_installed_casks:
+homebrew_cask_apps:
   - 1password
+  - ableton-live-suite
   - adobe-digital-editions
   - airfoil
   - alfred
   - arq
   - bartender
+  - beatunes
   - carbon-copy-cloner
+  - cardhop
   - cleanmymac
+  - cleanshot
+  - clickup
   - docker
+  - dropbox
   - evernote
   - fantastical
+  - firefox
+  - github
   - google-chrome
+  - google-drive
+  - grammarly
   - iterm2
-  - microsoft-office
-  - microsoft-teams
-  - skitch
+  - jaikoz
+  - nordvpn
+  - postico
+  - qbittorrent
+  - roon
   - slack
+  - supercollider
   - typora
   - visual-studio-code
   - vlc
+  - whatsapp-beta
+  - xld
 
 mas_installed_apps:
+  - { id: 918858936, name: "Airmail" }
   - { id: 937984704, name: "Amphetamine" }
+  - { id: 1091189122, name: "Bear" }
   - { id: 1435957248, name: "Drafts" }
   - { id: 441258766, name: "Magnet" }
   - { id: 1289197285, name: "Mindnode" }
   - { id: 1449412482, name: "Reeder" }
+  - { id: 1475387142, name: "Tailscale" }
   - { id: 488764545, name: "The Clock" }
   - { id: 904280696, name: "Things" }
   - { id: 1384080005, name: "Tweetbot" }
+  # Safari Extensions
+  - { id: 1481669779, name: "Evernote Web Clipper" }
+  - { id: 1462114288, name: "Grammarly for Safari" }
+  - { id: 1477385213, name: "Save to Pocket" }
+  - { id: 1549370672, name: "Save to Raindrop.io" }
+
+vscode_installed_extensions:
+  - editorconfig.editorconfig
+  - hashicorp.terraform
+  - mechatroner.rainbow-csv
+  - ms-azuretools.vscode-docker
+  - ms-python.python
+  - SmukkeKim.theme-setimonokai
+  - streetsidesoftware.code-spell-checker
+  - Tyriar.sort-lines
+
+dockitems_remove:
+  - App Store
+  - Calendar
+  - Contacts
+  - FaceTime
+  - Launchpad
+  - Mail
+  - Maps
+  - Messages
+  - Music
+  - News
+  - Notes
+  - Photos
+  - Podcasts
+  - Reminders
+  - System Preferences
+  - TV
+
+dockitems_persist:
+  - name: Things
+    path: "/Applications/Things.app/"
+    pos: 1
+  - name: Fantastical
+    path: "/Applications/Fantastical.app/"
+    pos: 2
+  - name: Airmail
+    path: "/Applications/Airmail.app/"
+    pos: 3
+  - name: Safari
+    path: "/Applications/Safari.app/"
+    pos: 4
+  - name: Visual Studio Code
+    path: "/Applications/Visual Studio Code.app/"
+    pos: 5
+  - name: Mindnode
+    path: "/Applications/Mindnode.app/"
+    pos: 6
+  - name: Bear
+    path: "/Applications/Bear.app/"
+    pos: 7
+  - name: Drafts
+    path: "/Applications/Drafts.app/"
+    pos: 8
+  - name: Evernote
+    path: "/Applications/Evernote.app/"
+    pos: 9
+  - name: Roon
+    path: "/Applications/Roon.app/"
+    pos: 10
+  - name: Music
+    path: "/Applications/Music.app/"
+    pos: 11
 
 dotfiles_repo: git@github.com:jmfontaine/dotfiles.git
-dotfiles_repo_version: master
-dotfiles_repo_local_destination: ~/Workspaces/Personal/dotfiles
+dotfiles_repo_version: 2022-redux
+dotfiles_repo_local_destination: ~/Projects/Personal/dotfiles
 dotfiles_files:
+  - .dir_colors
+  - .editorconfig
   - .gitconfig
   - .gitconfig-work
   - .gitignore
+  - .warprc
   - .zshrc
